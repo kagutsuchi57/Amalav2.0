@@ -129,7 +129,7 @@ async def play(c: Client, m: Message):
             [
                 [
                         InlineKeyboardButton(
-                            "🗑 ʙɪɴ", callback_data="set_close"), 
+                            "Close 🗑", callback_data="set_close"), 
                 ]
             ]
         )
@@ -137,7 +137,7 @@ async def play(c: Client, m: Message):
                 await m.reply_photo(
                     photo=image,
                     reply_markup=buttons,
-                    caption=f"**🍀ɴᴇxᴛ sᴏɴɢ ᴀᴛ ᴘᴏsɪᴛɪᴏɴ ɪɴ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs sᴇʀᴠᴇʀ... `{pos}` 🌷 ...**",
+                    caption=f"**🍀ɴᴇxᴛ sᴏɴɢ ᴀᴛ ᴘᴏsɪᴛɪᴏɴ ɪɴ sᴇʀᴠᴇʀ... `{pos}`...**",
                 )
             else:
                 try:
@@ -145,7 +145,7 @@ async def play(c: Client, m: Message):
                     userid = m.from_user.id
                     thumbnail = f"{IMG_5}"
                     image = await thumb(thumbnail, title, userid)
-                    await suhu.edit("🌹**ʏᴏᴜʀ sᴏɴɢ ɪs ᴘʀᴏᴄᴇssɪɴɢ ᴏɴ ᴍʏ sᴇʀᴠᴇʀ**")
+                    await suhu.edit("**ʏᴏᴜʀ sᴏɴɢ ɪs ᴘʀᴏᴄᴇssɪɴɢ ᴏɴ ᴍʏ sᴇʀᴠᴇʀ**")
                     await call_py.join_group_call(
                         chat_id,
                         AudioPiped(
@@ -170,7 +170,7 @@ async def play(c: Client, m: Message):
                     await m.reply_photo(
                         photo=image,
                         reply_markup=buttons,
-                        caption=f"**🍃ᴀᴍᴀʟᴀ ʀᴏʙᴏᴛ ᴀᴜᴅɪᴏ ᴘʟᴀʏɪɴɢ ᴏɴ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs ᴘʀɪᴠᴀᴛᴇ sᴇʀᴠᴇʀ ....**",
+                        caption=f"**🍃Naomi ʀᴏʙᴏᴛ ᴀᴜᴅɪᴏ ᴘʟᴀʏɪɴɢ ᴏɴ ᴘʀɪᴠᴀᴛᴇ sᴇʀᴠᴇʀ ....**",
                     )
                 except Exception as e:
                     await suhu.delete()
@@ -178,14 +178,14 @@ async def play(c: Client, m: Message):
         else:
             if len(m.command) < 2:
                 await m.reply(
-                    "**✨ᴡʜᴀᴛ ᴅᴏ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴘʟᴀʏ ʙᴀʙʏ👶...**"
+                    "**✨ᴡʜᴀᴛ ᴅᴏ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴘʟᴀʏ...**"
                 )
             else:
                 suhu = await c.send_message(chat_id, "🔍")
                 query = m.text.split(None, 1)[1]
                 search = ytsearch(query)
                 if search == 0:
-                    await suhu.edit("**sᴏɴɢ ɴᴏᴛ ғᴏᴜɴᴅ ʙᴀʙʏ...**")
+                    await suhu.edit("**sᴏɴɢ ɴᴏᴛ ғᴏᴜɴᴅ...**")
                 else:
                     songname = search[0]
                     title = search[0]
@@ -207,7 +207,7 @@ async def play(c: Client, m: Message):
             [
                 [
                         InlineKeyboardButton(
-                            "🗑 ʙɪɴ", callback_data="set_close"), 
+                            "Close 🗑", callback_data="set_close"), 
                 ]
             ]
         )
@@ -215,11 +215,11 @@ async def play(c: Client, m: Message):
                             await m.reply_photo(
                                 photo=image,
                                 reply_markup=buttons,
-                                caption=f"**🍀ɴᴇxᴛ sᴏɴɢ ᴀᴛ ᴘᴏsɪᴛɪᴏɴ ɪɴ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs sᴇʀᴠᴇʀ... `{pos}` 🌷...**",
+                                caption=f"**🍀ɴᴇxᴛ sᴏɴɢ ᴀᴛ ᴘᴏsɪᴛɪᴏɴ ɪɴ sᴇʀᴠᴇʀ... `{pos}`...**",
                             )
                         else:
                             try:
-                                await suhu.edit("🌹 **ʏᴏᴜʀ sᴏɴɢ ɪs ᴘʀᴏᴄᴇssɪɴɢ ᴏɴ ᴍʏ sᴇʀᴠᴇʀ**")
+                                await suhu.edit("**ʏᴏᴜʀ sᴏɴɢ ɪs ᴘʀᴏᴄᴇssɪɴɢ ᴏɴ ᴍʏ sᴇʀᴠᴇʀ**")
                                 await call_py.join_group_call(
                                     chat_id,
                                     AudioPiped(
@@ -244,7 +244,7 @@ async def play(c: Client, m: Message):
                                 await m.reply_photo(
                                     photo=image,
                                     reply_markup=buttons,
-                                    caption=f"**🍃ᴀᴍᴀʟᴀ ʀᴏʙᴏᴛ ᴀᴜᴅɪᴏ ᴘʟᴀʏɪɴɢ ᴏɴ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs ᴘʀɪᴠᴀᴛᴇ sᴇʀᴠᴇʀ ...**",
+                                    caption=f"**🍃Naomi ʀᴏʙᴏᴛ ᴀᴜᴅɪᴏ ᴘʟᴀʏɪɴɢ ᴏɴ ᴘʀɪᴠᴀᴛᴇ sᴇʀᴠᴇʀ ...**",
                                 )
                             except Exception as ep:
                                 await suhu.delete()
@@ -253,14 +253,14 @@ async def play(c: Client, m: Message):
     else:
         if len(m.command) < 2:
             await m.reply(
-                "**✨ᴡʜᴀᴛ ᴅᴏ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴘʟᴀʏ ʙᴀʙʏ👶..**"
+                "**✨ᴡʜᴀᴛ ᴅᴏ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴘʟᴀʏ ..**"
             )
         else:
             suhu = await c.send_message(chat_id, "🔍")
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
             if search == 0:
-                await suhu.edit("**sᴏɴɢ ɴᴏᴛ ғᴏᴜɴᴅ ʙᴀʙʏ**")
+                await suhu.edit("**sᴏɴɢ ɴᴏᴛ ғᴏᴜɴᴅ **")
             else:
                 songname = search[0]
                 title = search[0]
@@ -281,18 +281,18 @@ async def play(c: Client, m: Message):
             [
                 [
                         InlineKeyboardButton(
-                            "🗑 ʙɪɴ", callback_data="set_close"), 
+                            "Close 🗑", callback_data="set_close"), 
                 ]
             ]
         )
                         await m.reply_photo(
                             photo=image,
                             reply_markup=buttons,
-                            caption=f"**🍀ɴᴇxᴛ sᴏɴɢ ᴀᴛ ᴘᴏsɪᴛɪᴏɴ ɪɴ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs sᴇʀᴠᴇʀ... `{pos}` 🌷 ...**",
+                            caption=f"**🍀ɴᴇxᴛ sᴏɴɢ ᴀᴛ ᴘᴏsɪᴛɪᴏɴ ɪɴ sᴇʀᴠᴇʀ... `{pos}`...**",
                         )
                     else:
                         try:
-                            await suhu.edit("🌹 **ʏᴏᴜʀ sᴏɴɢ ɪs ᴘʀᴏᴄᴇssɪɴɢ ᴏɴ ᴍʏ sᴇʀᴠᴇʀ**")
+                            await suhu.edit("**ʏᴏᴜʀ sᴏɴɢ ɪs ᴘʀᴏᴄᴇssɪɴɢ ᴏɴ ᴍʏ sᴇʀᴠᴇʀ**")
                             await call_py.join_group_call(
                                 chat_id,
                                 AudioPiped(
@@ -315,7 +315,7 @@ async def play(c: Client, m: Message):
                             await m.reply_photo(
                                 photo=image,
                                 reply_markup=buttons,
-                                caption=f"**🍃ᴀᴍᴀʟᴀ ʀᴏʙᴏᴛ ᴀᴜᴅɪᴏ ᴘʟᴀʏɪɴɢ ᴏɴ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs ᴘʀɪᴠᴀᴛᴇ sᴇʀᴠᴇʀ ...**",
+                                caption=f"**🍃Naomi ʀᴏʙᴏᴛ ᴀᴜᴅɪᴏ ᴘʟᴀʏɪɴɢ ᴏɴ ᴘʀɪᴠᴀᴛᴇ sᴇʀᴠᴇʀ ...**",
                             )
                         except Exception as ep:
                             await suhu.delete()
