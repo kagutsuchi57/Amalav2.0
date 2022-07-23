@@ -114,7 +114,7 @@ async def vplay(c: Client, m: Message):
             pass
         except Exception as e:
             return await m.reply_text(
-                f"🔥 **ᴜsᴇʀʙᴏᴛ ғᴀɪʟᴇᴅ ᴛᴏ ᴊᴏɪɴ**\n\n**ʀᴇᴀsᴏɴ**: `{e}`"
+                f" **ᴜsᴇʀʙᴏᴛ ғᴀɪʟᴇᴅ ᴛᴏ ᴊᴏɪɴ**\n\n**ʀᴇᴀsᴏɴ**: `{e}`"
             )
 
     if replied:
@@ -162,7 +162,7 @@ async def vplay(c: Client, m: Message):
                 await m.reply_photo(
                     photo=image,
                     reply_markup=buttons,
-                    caption=f"**🍀ɴᴇxᴛ sᴏɴɢ ᴀᴛ ᴘᴏsɪᴛɪᴏɴ ɪɴ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs sᴇʀᴠᴇʀ... `{pos}` 🌷 ...**",
+                    caption=f"**🍀ɴᴇxᴛ sᴏɴɢ ᴀᴛ ᴘᴏsɪᴛɪᴏɴ ɪɴ sᴇʀᴠᴇʀ... `{pos}` ...**",
                 )
             else:
                 title = songname
@@ -175,7 +175,7 @@ async def vplay(c: Client, m: Message):
                     amaze = MediumQualityVideo()
                 elif Q == 360:
                     amaze = LowQualityVideo()
-                await loser.edit("**🌹 ʏᴏᴜʀ sᴏɴɢ ɪs ᴘʀᴏᴄᴇssɪɴɢ ᴏɴ ᴍʏ sᴇʀᴠᴇʀ**")
+                await loser.edit("**ʏᴏᴜʀ sᴏɴɢ ɪs ᴘʀᴏᴄᴇssɪɴɢ ᴏɴ ᴍʏ sᴇʀᴠᴇʀ**")
                 await call_py.join_group_call(
                     chat_id,
                     AudioVideoPiped(
@@ -192,19 +192,19 @@ async def vplay(c: Client, m: Message):
             [
                 [
                         InlineKeyboardButton(
-                            "🗑 ʙɪɴ", callback_data="set_close"), 
+                            "Close 🗑", callback_data="set_close"), 
                 ]
             ]
         )
                 await m.reply_photo(
                     photo=image,
                     reply_markup=buttons,
-                    caption=f"**🍃ᴀᴍᴀʟᴀ ʀᴏʙᴏᴛ ᴠɪᴅᴇᴏ ᴘʟᴀʏɪɴɢ ᴏɴ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs ᴘʀɪᴠᴀᴛᴇ sᴇʀᴠᴇʀ ...**",
+                    caption=f"**🍃Naomi ʀᴏʙᴏᴛ ᴠɪᴅᴇᴏ ᴘʟᴀʏɪɴɢ ᴏɴ ᴘʀɪᴠᴀᴛᴇ sᴇʀᴠᴇʀ ...**",
                 )
         else:
             if len(m.command) < 2:
                 await m.reply(
-                    "**✨ᴡʜᴀᴛ ᴅᴏ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴘʟᴀʏ ʙᴀʙʏ👶**"
+                    "**✨ᴡʜᴀᴛ ᴅᴏ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴘʟᴀʏ**"
                 )
             else:
                 loser = await c.send_message(chat_id, "🔍")
@@ -213,7 +213,7 @@ async def vplay(c: Client, m: Message):
                 Q = 720
                 amaze = HighQualityVideo()
                 if search == 0:
-                    await loser.edit("**sᴏɴɢ ɴᴏᴛ ғᴏᴜɴᴅ ʙᴀʙʏ**")
+                    await loser.edit("**sᴏɴɢ ɴᴏᴛ ғᴏᴜɴᴅ**")
                 else:
                     songname = search[0]
                     title = search[0]
@@ -243,11 +243,11 @@ async def vplay(c: Client, m: Message):
                             await m.reply_photo(
                                 photo=image,
                                 reply_markup=buttons,
-                                caption=f"**🍀ɴᴇxᴛ sᴏɴɢ ᴀᴛ ᴘᴏsɪᴛɪᴏɴ ɪɴ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs sᴇʀᴠᴇʀ... `{pos}` 🌷 ...**",
+                                caption=f"**🍀ɴᴇxᴛ sᴏɴɢ ᴀᴛ ᴘᴏsɪᴛɪᴏɴ ɪɴ sᴇʀᴠᴇʀ... `{pos}`...**",
                             )
                         else:
                             try:
-                                await loser.edit("**🌹 ʏᴏᴜʀ sᴏɴɢ ɪs ᴘʀᴏᴄᴇssɪɴɢ ᴏɴ ᴍʏ sᴇʀᴠᴇʀ**")
+                                await loser.edit("**ʏᴏᴜʀ sᴏɴɢ ɪs ᴘʀᴏᴄᴇssɪɴɢ ᴏɴ ᴍʏ sᴇʀᴠᴇʀ**")
                                 await call_py.join_group_call(
                                     chat_id,
                                     AudioVideoPiped(
@@ -271,7 +271,7 @@ async def vplay(c: Client, m: Message):
                                 await m.reply_photo(
                                     photo=image,
                                     reply_markup=buttons,
-                                    caption=f"**ᴀᴍᴀʟᴀ ʀᴏʙᴏᴛ ᴠɪᴅᴇᴏ ᴘʟᴀʏɪɴɢ ᴏɴ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs ᴘʀɪᴠᴀᴛᴇ sᴇʀᴠᴇʀ ...**",
+                                    caption=f"**Naomi ʀᴏʙᴏᴛ ᴠɪᴅᴇᴏ ᴘʟᴀʏɪɴɢ ᴏɴ ᴘʀɪᴠᴀᴛᴇ sᴇʀᴠᴇʀ ...**",
                                 )
                             except Exception as ep:
                                 await loser.delete()
@@ -280,7 +280,7 @@ async def vplay(c: Client, m: Message):
     else:
         if len(m.command) < 2:
             await m.reply(
-                "🌷ʀᴇᴘʟʏ ᴛᴏ ᴀɴ **ᴠɪᴅᴇᴏ ғɪʟᴇ** ᴏʀ **ɢɪᴠᴇ sᴏᴍᴇᴛʜɪɴɢ ᴛᴇxᴛ ʙᴀʙʏ 👶**"
+                "🌷ʀᴇᴘʟʏ ᴛᴏ ᴀɴ **ᴠɪᴅᴇᴏ ғɪʟᴇ** ᴏʀ **ɢɪᴠᴇ sᴏᴍᴇᴛʜɪɴɢ ᴛᴇxᴛ**"
             )
         else:
             loser = await c.send_message(chat_id, "🔍")
@@ -319,11 +319,11 @@ async def vplay(c: Client, m: Message):
                         await m.reply_photo(
                             photo=image,
                             reply_markup=buttons,
-                            caption=f"**🍀ɴᴇxᴛ sᴏɴɢ ᴀᴛ ᴘᴏsɪᴛɪᴏɴ ɪɴ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs sᴇʀᴠᴇʀ... `{pos}` 🌷 ...**",
+                            caption=f"**🍀ɴᴇxᴛ sᴏɴɢ ᴀᴛ ᴘᴏsɪᴛɪᴏɴ ɪɴ sᴇʀᴠᴇʀ... `{pos}`...**",
                         )
                     else:
                         try:
-                            await loser.edit("**🌹 ʏᴏᴜʀ sᴏɴɢ ɪs ᴘʀᴏᴄᴇssɪɴɢ ᴏɴ ᴍʏ sᴇʀᴠᴇʀ**")
+                            await loser.edit("**ʏᴏᴜʀ sᴏɴɢ ɪs ᴘʀᴏᴄᴇssɪɴɢ ᴏɴ ᴍʏ sᴇʀᴠᴇʀ**")
                             await call_py.join_group_call(
                                 chat_id,
                                 AudioVideoPiped(
@@ -347,7 +347,7 @@ async def vplay(c: Client, m: Message):
                             await m.reply_photo(
                                 photo=image,
                                 reply_markup=buttons,
-                                caption=f"**ᴀᴍᴀʟᴀ ʀᴏʙᴏᴛ ᴠɪᴅᴇᴏ ᴘʟᴀʏɪɴɢ ᴏɴ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs ᴘʀɪᴠᴀᴛᴇ sᴇʀᴠᴇʀ ...**",
+                                caption=f"**Naomi ʀᴏʙᴏᴛ ᴠɪᴅᴇᴏ ᴘʟᴀʏɪɴɢ ᴏɴ ᴘʀɪᴠᴀᴛᴇ sᴇʀᴠᴇʀ ...**",
                             )
                         except Exception as ep:
                             await loser.delete()
@@ -422,7 +422,7 @@ async def vstream(c: Client, m: Message):
         if len(m.command) == 2:
             link = m.text.split(None, 1)[1]
             Q = 720
-            loser = await c.send_message(chat_id, "**ɪᴀᴍ ᴘʀᴏᴄᴇssɪɴɢ ʏᴏᴜʀ sᴛʀᴇᴀᴍ ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ..🍃**")
+            loser = await c.send_message(chat_id, "**ᴘʀᴏᴄᴇssɪɴɢ ʏᴏᴜʀ sᴛʀᴇᴀᴍ ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ..🍃**")
         elif len(m.command) == 3:
             op = m.text.split(None, 1)[1]
             link = op.split(None, 1)[0]
@@ -464,7 +464,7 @@ async def vstream(c: Client, m: Message):
                 await m.reply_photo(
                     photo=f"{IMG_1}",
                     reply_markup=buttons,
-                    caption=f"**🍀ɴᴇxᴛ sᴏɴɢ ᴀᴛ ᴘᴏsɪᴛɪᴏɴ ɪɴ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs sᴇʀᴠᴇʀ... `{pos}` 🌷 ...**",
+                    caption=f"**🍀ɴᴇxᴛ sᴏɴɢ ᴀᴛ ᴘᴏsɪᴛɪᴏɴ ɪɴ sᴇʀᴠᴇʀ... `{pos}`...**",
                 )
             else:
                 if Q == 720:
@@ -474,7 +474,7 @@ async def vstream(c: Client, m: Message):
                 elif Q == 360:
                     amaze = LowQualityVideo()
                 try:
-                    await loser.edit("ᴡᴀɪᴛ ʙᴀʙʏ ɪᴀᴍ ᴀʟsᴏ ᴊᴏɪɴɪɴɢ ᴠᴄ...✨")
+                    await loser.edit("ᴡᴀɪᴛ ᴊᴏɪɴɪɴɢ ᴠᴄ...✨")
                     await call_py.join_group_call(
                         chat_id,
                         AudioVideoPiped(
@@ -500,7 +500,7 @@ async def vstream(c: Client, m: Message):
                     await m.reply_photo(
                         photo=f"{IMG_2}",
                         reply_markup=buttons,
-                        caption=f"**🔥ᴀᴍᴀʟᴀ ɴᴏᴡ sᴛʀᴇᴀᴍɪɴɢ ᴏɴ ᴀᴍᴀʟᴀ ᴘʀɪᴠᴀᴛᴇ sᴇʀᴠᴇʀ 🍃**",
+                        caption=f"**Naomi🔥 ɴᴏᴡ sᴛʀᴇᴀᴍɪɴɢ ᴏɴ ᴘʀɪᴠᴀᴛᴇ sᴇʀᴠᴇʀ 🍃**",
                     )
                 except Exception as ep:
                     await loser.delete()
