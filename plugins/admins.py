@@ -41,11 +41,11 @@ async def skip(c: Client, m: Message):
     if len(m.command) < 2:
         op = await skip_current_song(chat_id)
         if op == 0:
-            await c.send_message(chat_id, "**ɴᴏᴛʜɪɴɢ ᴛᴏ ᴘʟᴀʏ ʙᴀʙʏ 👶..**")
+            await c.send_message(chat_id, "**ɴᴏᴛʜɪɴɢ ᴛᴏ ᴘʟᴀʏ..**")
         elif op == 1:
             await c.send_message(chat_id, "ʏᴏᴜʀ ǫᴜᴇᴜᴇ ɪs ᴇᴍᴘᴛʏ ʙʏᴇ ɪᴀᴍ ʟᴇᴀᴠɪɴɢ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ (ᴠᴄ)😌..")
         elif op == 2:
-            await c.send_message(chat_id, "**ɪᴀᴍ ᴄʟᴇᴀʀɪɴɢ ʏᴏᴜʀ ǫᴜᴇᴜᴇs ʙʏᴇ ɪᴀᴍ ʟᴇᴀᴠɪɴɢ ᴠᴄ ʙᴀʙʏ....**")
+            await c.send_message(chat_id, "**ɪᴀᴍ ᴄʟᴇᴀʀɪɴɢ ʏᴏᴜʀ ǫᴜᴇᴜᴇs ʙʏᴇ ɪᴀᴍ ʟᴇᴀᴠɪɴɢ ᴠᴄ....**")
         else:
             buttons = InlineKeyboardMarkup(
             [
@@ -70,7 +70,7 @@ async def skip(c: Client, m: Message):
             )
     else:
         skip = m.text.split(None, 1)[1]
-        OP = "🗑 **ɪᴀᴍ ʀᴇᴍᴏᴠᴇᴅ sᴏɴɢ ғʀᴏᴍ ǫᴜᴇᴜᴇ\n ᴛʜᴀɴᴋ ʏᴏᴜ ❤🌹:**"
+        OP = "🗑 **ɪ ʀᴇᴍᴏᴠᴇᴅ sᴏɴɢ ғʀᴏᴍ ǫᴜᴇᴜᴇ\n ᴛʜᴀɴᴋ ʏᴏᴜ ❤:**"
         if chat_id in QUEUE:
             items = [int(x) for x in skip.split(" ") if x.isdigit()]
             items.sort(reverse=True)
@@ -97,11 +97,11 @@ async def stop(client, m: Message):
         try:
             await call_py.leave_group_call(chat_id)
             clear_queue(chat_id)
-            await m.reply("**ɪᴀᴍ ᴅɪsᴄᴏɴɴᴇᴄᴛᴇᴅ ғʀᴏᴍ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ**")
+            await m.reply("**ᴅɪsᴄᴏɴɴᴇᴄᴛɪɴɢ ғʀᴏᴍ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ**")
         except Exception as e:
             await m.reply(f"🚫 **ᴇʀʀᴏʀ:**\n\n`{e}`")
     else:
-        await m.reply("🔥 **ɴᴏᴛʜɪɴɢ ɪs sᴛʀᴇᴀᴍɪɴɢ ʜᴇʀᴇ 😒...**")
+        await m.reply("**ɴᴏᴛʜɪɴɢ ɪs sᴛʀᴇᴀᴍɪɴɢ ʜᴇʀᴇ 😒...**")
 
 
 @Client.on_message(
@@ -114,12 +114,12 @@ async def pause(client, m: Message):
         try:
             await call_py.pause_stream(chat_id)
             await m.reply(
-                f"**🌹 sᴜᴄᴄᴇssғᴜʟʟʏ ᴘᴀᴜsᴇᴅ ᴄᴜʀʀᴇɴᴛʟʏ ᴘʟᴀʏɪɴɢ sᴏɴɢ.\n╰ ᴍᴜsɪᴄ ᴘᴀᴜsᴇᴅ ʙʏ: {m.from_user.mention()}**"
+                f"**sᴜᴄᴄᴇssғᴜʟʟʏ ᴘᴀᴜsᴇᴅ ᴄᴜʀʀᴇɴᴛʟʏ ᴘʟᴀʏɪɴɢ sᴏɴɢ.\n╰ ᴍᴜsɪᴄ ᴘᴀᴜsᴇᴅ ʙʏ: {m.from_user.mention()}**"
             )
         except Exception as e:
             await m.reply(f"🚫 **ᴇʀʀᴏʀ:**\n\n`{e}`")
     else:
-        await m.reply("🔥 **ɴᴏᴛʜɪɴɢ ɪs sᴛʀᴇᴀᴍɪɴɢ ʜᴇʀᴇ 😒 ...**")
+        await m.reply("**ɴᴏᴛʜɪɴɢ ɪs sᴛʀᴇᴀᴍɪɴɢ ʜᴇʀᴇ 😒 ...**")
 
 
 @Client.on_message(
@@ -132,9 +132,9 @@ async def resume(client, m: Message):
         try:
             await call_py.resume_stream(chat_id)
             await m.reply(
-                f"**👻 sᴜᴄᴄᴇssғᴜʟʟʏ ʀᴇsᴜᴍᴇᴅ ᴄᴜʀʀᴇɴᴛʟʏ ᴘʟᴀʏɪɴɢ sᴏɴɢ.\n╰ ᴍᴜsɪᴄ ʀᴇsᴜᴍᴇᴅ ʙʏ: {m.from_user.mention()}**"
+                f"**sᴜᴄᴄᴇssғᴜʟʟʏ ʀᴇsᴜᴍᴇᴅ ᴄᴜʀʀᴇɴᴛʟʏ ᴘʟᴀʏɪɴɢ sᴏɴɢ.\n╰ ᴍᴜsɪᴄ ʀᴇsᴜᴍᴇᴅ ʙʏ: {m.from_user.mention()}**"
             )
         except Exception as e:
             await m.reply(f"🚫 **ᴇʀʀᴏʀ:**\n\n`{e}`")
     else:
-        await m.reply("🔥 **ɴᴏᴛʜɪɴɢ ɪs sᴛʀᴇᴀᴍɪɴɢ ʜᴇʀᴇ 😒**")
+        await m.reply("**ɴᴏᴛʜɪɴɢ ɪs sᴛʀᴇᴀᴍɪɴɢ ʜᴇʀᴇ 😒**")
