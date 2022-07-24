@@ -63,8 +63,9 @@ async def general_list(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""ʜᴇʟʟᴏ 🦊 [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !
 
-➠ /play - reply to a youtube link or audio to play song | also reply to a video file for streming it.\n
-➠ /vplay - reply to a youtube/live-link/m3u8 url to play video in vc.
+➠ /play - reply to a youtube link or audio to play song.\n
+➠ /vplay - reply to a video file for streming it.\n
+➠ /vstream - reply to a youtube/live-link/m3u8 url to play video in vc.
 ➠ /ping - show the bot ping status\n
 ➠ /uptime - show the bot uptime(group only)\n
 ➠ /alive - sʜᴏᴡ ᴛʜᴇ ʙᴏᴛ ᴀʟɪᴠᴇ ɪɴғᴏ (group help)\n
