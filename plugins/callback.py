@@ -1,4 +1,4 @@
-## ©copyright infringement on Telugu Coder
+## ©copyright infringement on Telugu Code
 
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters          
