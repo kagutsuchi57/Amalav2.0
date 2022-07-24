@@ -66,7 +66,7 @@ async def general_list(_, query: CallbackQuery):
 ➠ /play - reply to a youtube link or audio to play song.\n
 ➠ /vplay - reply to a video file for streming it.\n
 ➠ /vstream - reply to a youtube/live-link/m3u8 url to play video in vc.
-➠ /ping - show the bot ping status\n
+➠ /ping - show the bot ping status.\n
 ➠ /uptime - show the bot uptime(group only)\n
 ➠ /alive - sʜᴏᴡ ᴛʜᴇ ʙᴏᴛ ᴀʟɪᴠᴇ ɪɴғᴏ (group help)\n
 ➠ /help - To know bot cmds.\n
