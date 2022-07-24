@@ -63,13 +63,13 @@ async def general_list(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""ʜᴇʟʟᴏ 🦊 [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !
 
-➠ /play - sᴏɴɢ ɴᴀᴍᴇ/ʟɪɴᴋ And ᴘʟᴀʏ ᴍᴜsɪᴄ ᴏɴ ᴠɪᴅᴇᴏ ᴄʜᴀᴛ\n
-➠ /song (ǫᴜᴇʀʏ) - ᴅᴏᴡɴʟᴏᴀᴅ sᴏɴɢ ғʀᴏᴍ ʏᴏᴜᴛᴜʙᴇ\n
-➠ /search (ǫᴜᴇʀʏ) - sᴇᴀʀᴄʜ ᴀ ʏᴏᴜᴛᴜʙᴇ ᴠɪᴅᴇᴏ ʟɪɴᴋ\n
-➠ /ping - sʜᴏᴡ ᴛʜᴇ ʙᴏᴛ ᴘɪɴɢ sᴛᴀᴛᴜs\n
-➠ /uptime - sʜᴏᴡ ᴛʜᴇ ʙᴏᴛ ᴜᴘᴛɪᴍᴇ sᴛᴀᴛᴜs\n
-➠ /alive - sʜᴏᴡ ᴛʜᴇ ʙᴏᴛ ᴀʟɪᴠᴇ ɪɴғᴏ (ɪɴ ɢʀᴏᴜᴘ ᴏɴʟʏ)\n
-➠ /help - ᴛᴏ sʜᴏᴡ ʜᴇʟᴘ ᴍᴇssᴀɢᴇ (ғᴜʟʟ ʙᴏᴛ ɢᴜɪᴅᴇ)""",
+➠ /play - reply to a youtube link or audio to play song | also reply to a video file for streming it.\n
+➠ /vplay - reply to a youtube/live-link/m3u8 url to play video in vc.
+➠ /ping - show the bot ping status\n
+➠ /uptime - show the bot uptime(group only)\n
+➠ /alive - sʜᴏᴡ ᴛʜᴇ ʙᴏᴛ ᴀʟɪᴠᴇ ɪɴғᴏ (group help)\n
+➠ /help - To know bot cmds.\n
+➠ /ghelp - open help menu in grp""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
