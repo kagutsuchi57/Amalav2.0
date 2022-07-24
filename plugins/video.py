@@ -53,7 +53,7 @@ async def ytdl(link):
         return 0, stderr.decode()
 
 
-@Client.on_message(command("play") & filters.group & ~filters.edited)
+@Client.on_message(command("vplay") & filters.group & ~filters.edited)
 async def vplay(c: Client, m: Message):
     await m.delete()
     replied = m.reply_to_message
@@ -280,7 +280,7 @@ async def vplay(c: Client, m: Message):
     else:
         if len(m.command) < 2:
             await m.reply(
-                "🌷ʀᴇᴘʟʏ ᴛᴏ ᴀɴ **ᴠɪᴅᴇᴏ ғɪʟᴇ** ᴏʀ **ɢɪᴠᴇ sᴏᴍᴇᴛʜɪɴɢ ᴛᴇxᴛ**"
+                "ʀᴇᴘʟʏ ᴛᴏ ᴀɴ **ᴠɪᴅᴇᴏ ғɪʟᴇ** ᴏʀ **ɢɪᴠᴇ sᴏᴍᴇᴛʜɪɴɢ ᴛᴇxᴛ**"
             )
         else:
             loser = await c.send_message(chat_id, "🔍")
@@ -353,7 +353,7 @@ async def vplay(c: Client, m: Message):
                             await loser.delete()
                             await m.reply_text(f"🚫 ᴇʀʀᴏʀ: `{ep}`")
 
-@Client.on_message(command(["vplay", f"vplay@{BOT_USERNAME}"]) & filters.group & ~filters.edited)
+@Client.on_message(command(["vstream", f"vstream@{BOT_USERNAME}"]) & filters.group & ~filters.edited)
 async def vstream(c: Client, m: Message):
     await m.delete()
     chat_id = m.chat.id
@@ -436,7 +436,7 @@ async def vstream(c: Client, m: Message):
                 )
             loser = await c.send_message(chat_id, "**ɪᴀᴍ ᴘʀᴏᴄᴇssɪɴɢ ʏᴏᴜʀ sᴛʀᴇᴀᴍ ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ..🍃**")
         else:
-            await m.reply("**/vplay {link} {720/480/360}**")
+            await m.reply("**/vstream {link} {720/480/360}**")
 
         regex = r"^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+"
         match = re.match(regex, link)
