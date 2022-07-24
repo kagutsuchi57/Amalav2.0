@@ -53,7 +53,7 @@ async def ytdl(link):
         return 0, stderr.decode()
 
 
-@Client.on_message(command("vplay") & filters.group & ~filters.edited)
+@Client.on_message(command("play") & filters.group & ~filters.edited)
 async def vplay(c: Client, m: Message):
     await m.delete()
     replied = m.reply_to_message
@@ -162,7 +162,7 @@ async def vplay(c: Client, m: Message):
                 await m.reply_photo(
                     photo=image,
                     reply_markup=buttons,
-                    caption=f"**🍀ɴᴇxᴛ sᴏɴɢ ᴀᴛ ᴘᴏsɪᴛɪᴏɴ ɪɴ sᴇʀᴠᴇʀ... `{pos}` ...**",
+                    caption=f"**ɴᴇxᴛ sᴏɴɢ ᴀᴛ ᴘᴏsɪᴛɪᴏɴ ɪɴ sᴇʀᴠᴇʀ... `{pos}` ...**",
                 )
             else:
                 title = songname
@@ -199,7 +199,7 @@ async def vplay(c: Client, m: Message):
                 await m.reply_photo(
                     photo=image,
                     reply_markup=buttons,
-                    caption=f"**🍃Naomi ʀᴏʙᴏᴛ ᴠɪᴅᴇᴏ ᴘʟᴀʏɪɴɢ ᴏɴ ᴘʀɪᴠᴀᴛᴇ sᴇʀᴠᴇʀ ...**",
+                    caption=f"**Naomi ʀᴏʙᴏᴛ ᴠɪᴅᴇᴏ ᴘʟᴀʏɪɴɢ ᴏɴ ᴘʀɪᴠᴀᴛᴇ sᴇʀᴠᴇʀ ...**",
                 )
         else:
             if len(m.command) < 2:
@@ -243,7 +243,7 @@ async def vplay(c: Client, m: Message):
                             await m.reply_photo(
                                 photo=image,
                                 reply_markup=buttons,
-                                caption=f"**🍀ɴᴇxᴛ sᴏɴɢ ᴀᴛ ᴘᴏsɪᴛɪᴏɴ ɪɴ sᴇʀᴠᴇʀ... `{pos}`...**",
+                                caption=f"**ɴᴇxᴛ sᴏɴɢ ᴀᴛ ᴘᴏsɪᴛɪᴏɴ ɪɴ sᴇʀᴠᴇʀ... `{pos}`...**",
                             )
                         else:
                             try:
@@ -319,7 +319,7 @@ async def vplay(c: Client, m: Message):
                         await m.reply_photo(
                             photo=image,
                             reply_markup=buttons,
-                            caption=f"**🍀ɴᴇxᴛ sᴏɴɢ ᴀᴛ ᴘᴏsɪᴛɪᴏɴ ɪɴ sᴇʀᴠᴇʀ... `{pos}`...**",
+                            caption=f"**ɴᴇxᴛ sᴏɴɢ ᴀᴛ ᴘᴏsɪᴛɪᴏɴ ɪɴ sᴇʀᴠᴇʀ... `{pos}`...**",
                         )
                     else:
                         try:
@@ -353,7 +353,7 @@ async def vplay(c: Client, m: Message):
                             await loser.delete()
                             await m.reply_text(f"🚫 ᴇʀʀᴏʀ: `{ep}`")
 
-@Client.on_message(command(["vstream", f"vstream@{BOT_USERNAME}"]) & filters.group & ~filters.edited)
+@Client.on_message(command(["vplay", f"vplay@{BOT_USERNAME}"]) & filters.group & ~filters.edited)
 async def vstream(c: Client, m: Message):
     await m.delete()
     chat_id = m.chat.id
@@ -436,7 +436,7 @@ async def vstream(c: Client, m: Message):
                 )
             loser = await c.send_message(chat_id, "**ɪᴀᴍ ᴘʀᴏᴄᴇssɪɴɢ ʏᴏᴜʀ sᴛʀᴇᴀᴍ ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ..🍃**")
         else:
-            await m.reply("**/vstream {link} {720/480/360}**")
+            await m.reply("**/vplay {link} {720/480/360}**")
 
         regex = r"^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+"
         match = re.match(regex, link)
@@ -464,7 +464,7 @@ async def vstream(c: Client, m: Message):
                 await m.reply_photo(
                     photo=f"{IMG_1}",
                     reply_markup=buttons,
-                    caption=f"**🍀ɴᴇxᴛ sᴏɴɢ ᴀᴛ ᴘᴏsɪᴛɪᴏɴ ɪɴ sᴇʀᴠᴇʀ... `{pos}`...**",
+                    caption=f"**ɴᴇxᴛ sᴏɴɢ ᴀᴛ ᴘᴏsɪᴛɪᴏɴ ɪɴ sᴇʀᴠᴇʀ... `{pos}`...**",
                 )
             else:
                 if Q == 720:
@@ -500,7 +500,7 @@ async def vstream(c: Client, m: Message):
                     await m.reply_photo(
                         photo=f"{IMG_2}",
                         reply_markup=buttons,
-                        caption=f"**Naomi🔥 ɴᴏᴡ sᴛʀᴇᴀᴍɪɴɢ ᴏɴ ᴘʀɪᴠᴀᴛᴇ sᴇʀᴠᴇʀ 🍃**",
+                        caption=f"**Naomi🔥 ɴᴏᴡ sᴛʀᴇᴀᴍɪɴɢ ᴏɴ ᴘʀɪᴠᴀᴛᴇ sᴇʀᴠᴇʀ**",
                     )
                 except Exception as ep:
                     await loser.delete()
