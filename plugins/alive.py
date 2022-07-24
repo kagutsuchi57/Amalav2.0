@@ -110,7 +110,6 @@ async def gelp(client: Client, message: Message):
             InlineKeyboardButton("sᴛᴏᴘ", callback_data="stop_list"), 
             ],[
             InlineKeyboardButton("ᴘʟᴀʏ", callback_data="play_list"), 
-            InlineKeyboardButton("sᴏᴜʀᴄᴇ", callback_data="source"), 
             ],[
             InlineKeyboardButton("🗑 ʙɪɴ", callback_data="set_close"), 
             ]]
