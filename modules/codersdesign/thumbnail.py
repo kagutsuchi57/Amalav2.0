@@ -21,6 +21,7 @@ async def thumb(thumbnail, title, userid):
                 await f.write(await resp.read())
                 await f.close()
     image1 = Image.open(f"resource/thumb{userid}.png")
+    Image.alpha_composite(image1).save(f"resource/temp{userid}.png")
     img = Image.open(f"resource/temp{userid}.png")
     draw = ImageDraw.Draw(img)
     font = ImageFont.truetype("resource/Roboto-Regular.ttf", 50)
