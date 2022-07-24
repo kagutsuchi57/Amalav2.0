@@ -1,4 +1,4 @@
-## ©copyright infringement on Telugu Coders
+## ©copyright infringement on Telugu Coder
 
 
 import asyncio
